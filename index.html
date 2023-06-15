@@ -41,13 +41,13 @@
 
   <body>
 
-    <a-scene mindar-image="imageTargetSrc: https://gituseron.github.io/red_building_test/red_targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: https://gituseron.github.io/red_building_test2/red_targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-            <img id="pyzhyk_book" src="https://gituseron.github.io/red_building_test/a_pyzhyk_circle.png" />
-            <img id="333_door" src="https://gituseron.github.io/red_building_test/4_heart_transp.png" />
-            <video id="myVideo" src="https://gituseron.github.io/red_building_test/3_drago_cropped.mp4"></video>
-        <a-asset-item id="red_door" src="https://gituseron.github.io/red_building_test/2_gothere_333.glb"></a-asset-item>
-        <a-asset-item id="red_full" src="https://gituseron.github.io/red_building_test/1_istfac_wait.glb"></a-asset-item>
+            <img id="pyzhyk_book" src="https://gituseron.github.io/red_building_test2/a_pyzhyk_circle.png" />
+            <img id="333_door" src="https://gituseron.github.io/red_building_test2/4_heart_transp.png" />
+            <video id="myVideo" src="https://gituseron.github.io/red_building_test2/3_drago_cropped.mp4"></video>
+        <a-asset-item id="red_door" src="https://gituseron.github.io/red_building_test2/2_gothere_333.glb"></a-asset-item>
+        <a-asset-item id="red_full" src="https://gituseron.github.io/red_building_test2/1_istfac_wait.glb"></a-asset-item>
         <a-asset-item id="text"></a-asset-item>
       </a-assets>
 
@@ -67,6 +67,10 @@
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 4">
  <a-plane src="#333_door" position="0 0 0" height="0.552" width="0.552"rotation="0 0 0" transparent="true"></a-plane>
+      </a-entity>
+ <a-video id="#myVideo" position="0 0 0" height="1.252" width="0.552" rotation="0 0 0" preload autoplay loop></video>
+      <a-entity mindar-image-target="targetIndex: 5">
+  <a-plane class="clickable" material="src: #myVideo; opacity: 0.9; transparent: true" video-controller></a-plane>
       </a-entity>
     </a-scene>
   </body>
